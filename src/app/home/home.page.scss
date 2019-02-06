@@ -1,1 +1,7 @@
-
+ion-input { 
+    border:0.5px solid #dadada;
+    max-width:300px;
+}
+ion-item ion-input { 
+    border:none;
+}
