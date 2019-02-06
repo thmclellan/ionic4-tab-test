@@ -7,9 +7,9 @@
 </ion-header>
 
 <ion-content padding>
-Tab index testing with <strong> &lt;ion-input&gt;</strong>:
+Tab index testing with
 
-  <p>Plain Inputs</p>
+  <p>Test 1: Ion-Inputs without Ion-Item </p>
 
   <p>First: <ion-input type="text" [(ngModel)]="first"></ion-input></p>
   <p>Last: <ion-input type="text" [(ngModel)]="last"></ion-input></p>
@@ -17,12 +17,18 @@ Tab index testing with <strong> &lt;ion-input&gt;</strong>:
   <p>{{first}} {{last}} <span *ngIf="email">({{email}})</span></p>
 
   <ion-list>
+    <ion-header>Test 2: Plain HTML Inputs with Ion-Items </ion-header>
+  <ion-item><ion-label>First</ion-label><input type="text" [(ngModel)]="firstPlainItem"></ion-item>
+  <ion-item><ion-label>Last</ion-label><input type="text" [(ngModel)]="lastPlainItem"></ion-item>
+  <ion-item><ion-label>Email</ion-label><input type="text" [(ngModel)]="emailPlainItem"></ion-item>
+</ion-list>
+<p>{{firstPlainItem}} {{lastPlainItem}}  <span *ngIf="emailPlainItem">({{emailPlainItem}})</span></p>
 
-    <ion-header>Ion-Item Inputs</ion-header>
-
-  <ion-item><ion-label>First</ion-label><ion-input type="text" [(ngModel)]="firstItem"></ion-input></ion-item>
-  <ion-item><ion-label>Last</ion-label><ion-input type="text" [(ngModel)]="lastItem"></ion-input></ion-item>
-  <ion-item><ion-label>Email</ion-label><ion-input type="text" [(ngModel)]="emailItem"></ion-input></ion-item>
+<ion-list>
+  <ion-header>Test 3: Ion-Inputs with Ion-Items</ion-header>
+<ion-item><ion-label>First</ion-label><ion-input type="text" [(ngModel)]="firstItem"></ion-input></ion-item>
+<ion-item><ion-label>Last</ion-label><ion-input type="text" [(ngModel)]="lastItem"></ion-input></ion-item>
+<ion-item><ion-label>Email</ion-label><ion-input type="text" [(ngModel)]="emailItem"></ion-input></ion-item>
 </ion-list>
 <p>{{firstItem}} {{lastItem}}  <span *ngIf="emailItem">({{emailItem}})</span></p>
 
